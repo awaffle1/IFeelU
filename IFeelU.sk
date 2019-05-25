@@ -1,0 +1,43 @@
+# IFeelU a0.2
+# by im_a_waffle1
+# Spigot Edition
+
+options:
+    Prefix: &6[&5I&aFeel&9U&6]
+    Version: a0.2
+
+
+command /ifeelu <text="info"> [<text>]:
+    permission: ifeelu.use
+    permission message: {@Prefix} &4You do not have permission to perform this command. If this is an issue, contact a server administrator.
+    usage: &aType &e/ifeelu help &afor more help.
+    aliases: /ifu
+    trigger:
+        if arg-1 is "info" or "i":
+            message "&a------------------------------------------"
+            message "&6IFeelU {@Version}"
+            message "&5By im_a_waffle1 - awaffle1 Planet Minecraft"
+            message "&2For help, do /ifeelu help"
+            message "&a------------------------------------------"
+        if arg-1 is "help" or "h" or "?":
+            message "&2------------------------------------------"
+            message "&6IFeelU {@Version}"
+            message "&5By im_a_waffle1 - awaffle1 Planet Minecraft"
+            message "&r"
+            message "&5<> - Required"
+            message "&5[] - Optional"
+            message "&r"
+            message "&6Commands:"
+            message "&7Player Commands (ifeelu.use):"
+            message "&2/ifeelu yes"
+            message "&2/ifeelu no"
+            message "&2/ifeelu how"
+            message "&r"
+            message "&7Spigot Edition"
+            message "&2------------------------------------------"
+        if arg-1 is "yes":
+            broadcast "{@Prefix} &a%player% says &lyes"
+        if arg-1 is "no":
+            broadcast "{@Prefix} &c%player% says &lno"
+        if arg-1 is "how":
+            broadcast "{@Prefix} &5%player% is thinking... &lhow..."
